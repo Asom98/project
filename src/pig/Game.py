@@ -12,9 +12,8 @@ import player
 
 
 def main():
-    player1 = player.Player("kassem")
-    player1.change_name("hassan")
-    print(player1.get_name())
+
+    
     pass
 
 
