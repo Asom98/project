@@ -7,10 +7,10 @@ that will build the pig game!.
 '''
 
 def main():
-    
+
     return 0;
 
 
 if __name__ == '__main__':
-    # Call the main function.
+    # Calling the main function to execute the game.
     main()
