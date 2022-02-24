@@ -7,6 +7,8 @@ class testDiceClass():
     """Testing the dice class"""
 
     def test_init_default_object(self):
+        """Testing to make an object and check its properties"""
+
         #Making an abject of Dice class
         dice_object = dice.Dice()
 
@@ -15,7 +17,8 @@ class testDiceClass():
         self.assertIsInstance(dice_object, dice.Dice)
 
     
-    def test_faces(self):
+    def test_number_of_faces(self):
+        """Testing that the dice has 6 faces"""
         #Making an abject of Dice class
         dice_object = dice.Dice()
 
@@ -24,6 +27,7 @@ class testDiceClass():
 
 
     def test_roll_dice(self):
+        """Testing that you can roll a dice and get from 1-6 from the rolled dice"""
         #Making an abject of Dice class
         dice_object = dice.Dice()
 
