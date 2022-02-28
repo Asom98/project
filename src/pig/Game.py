@@ -13,8 +13,8 @@ import player
 
 def main():
 
-    
-    pass
+    player1 = player.Player("kassem")
+    print(player1.get_name())
 
 
 
