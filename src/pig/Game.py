@@ -13,7 +13,7 @@ import player
 
 def main():
 
-    player1 = player.Player("kassem")
+    player1 = player.Player("Stina")
     print(player1.get_name())
 
 
