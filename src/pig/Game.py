@@ -16,6 +16,9 @@ def main():
     player1 = player.Player("kassem")
     print(player1.get_name())
 
+    player1 = player.Player("Stina")
+    print(player1.get_name())
+
 
 
 if __name__ == '__main__':
