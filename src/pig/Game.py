@@ -19,7 +19,7 @@ def main():
     player2 = player.Player("Stina")
     print(player2.get_name())
 
-    player3 = player.Player("Simon")
+    player3 = player.Player("kalle")
     print(player3.get_name())
 
 
