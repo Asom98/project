@@ -5,7 +5,8 @@ class Dice():
     """
     Dice class that will allow us to make an instances of a reall dice.
     """
-
+    intro = "PIG GAME.\n"
+    
     # variable that all the instances of the dice class will have
     faces = 6
 
