@@ -18,13 +18,6 @@ class Dice():
         self.roll_made = 0
         self.sum_of_rolls = 0
 
-    '''
-    def set_faces(self, faces):
-
-        """Determine how many faces to set on the dice"""
-        self.faces = faces
-        print(f"The faces of the dice are now: {self.faces}")
-    '''
 
 
     def roll(self):

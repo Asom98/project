@@ -11,9 +11,6 @@ when ever they want
 class Player():
     """Player class"""
 
-    
-    def __init__(self):
-        """Make an instance of the player class"""
         
     
     def __init__(self, name):

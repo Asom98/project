@@ -22,6 +22,8 @@ def main():
     player3 = player.Player("kalle")
     print(player3.get_name())
 
+    
+
 
 
 if __name__ == '__main__':
