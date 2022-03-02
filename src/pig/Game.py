@@ -14,6 +14,7 @@ import player
 def main():
     
     information()
+    print(game_mode())
 
 
     
@@ -36,6 +37,24 @@ def information():
     print("The score will be tracked and the first player to reache 100 point will win.")
     print("")
     print("======================= Enjoy =======================")
+    print("")
+
+
+
+def game_mode():
+    """Here the player will choose to play with an AI or another player"""
+    
+    #the func will return 1 or 2 which determines the game mode
+    print("If you wanna play alone press (1). do you wanna play with another player press (2): ")
+    
+    choice = int(input("please enter 1 or 2 >> "))
+
+    while(choice > 2 or choice <= 0):
+        
+        choice = int(input("please enter 1 or 2 >> "))
+    
+    return choice
+
 
     
 
