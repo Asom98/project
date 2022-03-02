@@ -12,15 +12,21 @@ import player
 
 
 def main():
+    
+    information()
 
-    player1 = player.Player("Stina")
-    print(player1.get_name())
 
-    player2 = player.Player("Stina")
-    print(player2.get_name())
+    
 
-    player3 = player.Player("kalle")
-    print(player3.get_name())
+
+def information():
+    """In this function will all the information needed to play the game be printed"""
+    print("======================== Pig ========================")
+    print("=============== Wellcome to pig game! ===============")
+    print("")
+    print("You will be provided with all the informations to play the game.")
+    print("The game consist of either tow players or you can play with an AI(computer).")
+    print("you will be able to choose a name and change it later(chooseable!).")
 
     
 
