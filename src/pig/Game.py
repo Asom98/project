@@ -14,7 +14,16 @@ import player
 def main():
     
     information()
-    print(game_mode())
+
+    mode = game_mode() #choosing the game mode
+
+    while(mode == 1):  #player against AI
+        print("player against AI")
+        break
+
+    while(mode == 2):  #palyer vs another
+        print("palyer vs another")
+        break
 
 
     
@@ -43,10 +52,10 @@ def information():
 
 def game_mode():
     """Here the player will choose to play with an AI or another player"""
-    
+
     #the func will return 1 or 2 which determines the game mode
     print("If you wanna play alone press (1). do you wanna play with another player press (2): ")
-    
+    print("")
     choice = int(input("please enter 1 or 2 >> "))
 
     while(choice > 2 or choice <= 0):
