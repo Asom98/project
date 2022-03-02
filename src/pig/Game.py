@@ -1,19 +1,38 @@
 """
 
-This is going to be the game file(class) where all the funktions are executed
+This is going to be the game file where all the funktions are executed
 
-in the main function, those funktions will be imported from the other classes in the same package
+in the main function, those functions will be imported from the other classes in the same package
 
 that will build the pig game!.
 
 """
 
 import player
-
+import dice
+import diceHand
 
 def main():
+
     
-    information()
+    dice1 = dice.Dice()
+    diceHand1 = diceHand.DiceHand()
+
+    diceHand1.add_dice(dice1.roll())
+    diceHand1.add_dice(dice1.roll())
+    diceHand1.add_dice(dice1.roll())
+    diceHand1.add_dice(dice1.roll())
+    diceHand1.add_dice(dice1.roll())
+    diceHand1.add_dice(dice1.roll())
+    diceHand1.add_dice(dice1.roll())
+    diceHand1.add_dice(dice1.roll())
+
+    
+
+    diceHand1.show_dice_hand()
+
+    """
+        information()
 
     mode = game_mode() #choosing the game mode
 
@@ -24,6 +43,7 @@ def main():
     while(mode == 2):  #palyer vs another
         print("palyer vs another")
         break
+    """
 
 
     
@@ -32,7 +52,7 @@ def main():
 def information():
     """In this function will all the information needed to play the game be printed"""
 
-    print("======================== Pig ========================")
+    print("===================== Pig game ======================")
     print("=============== Wellcome to pig game! ===============")
     print("")
     print("You will be provided with all the informations to play the game.")

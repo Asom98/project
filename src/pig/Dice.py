@@ -1,3 +1,14 @@
+"""
+By useing this class we can creat an object that will let us use the object
+as a real dice. The object will have tow variables that will be used to control the roll
+made and the sum of the all roll made.
+
+you can easily roll a dice by using the function:
+
+    roll()
+    
+"""
+
 import random
 
 class Dice():
