@@ -7,13 +7,11 @@ class Dice():
     """
     intro = "PIG GAME.\n"
     
-    # variable that all the instances of the dice class will have
-    faces = 6
 
     def __init__(self):
 
         """Roll a dice once and return the value."""
-        random.seed()
+        #random.seed()
         # these variables will be different for each instance
         self.roll_made = 0
         self.sum_of_rolls = 0
@@ -27,6 +25,7 @@ class Dice():
         #Making random number between 1-6 and adding the value
         roll = random.randint(1,6)
         self.sum_of_rolls += roll
+
         return roll
 
 
