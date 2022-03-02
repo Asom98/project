@@ -1,3 +1,14 @@
+"""
+By useing this class we can creat an object that will let us use the object
+as a real dice. The object will have tow variables that will be used to control the roll
+made and the sum of the all roll made.
+
+you can easily roll a dice by using the function:
+
+    roll()
+    
+"""
+
 import random
 
 class Dice():
@@ -7,24 +18,15 @@ class Dice():
     """
     intro = "***PIG GAME, let's play***\n"
     
-    # variable that all the instances of the dice class will have
-    faces = 6
 
     def __init__(self):
 
         """Roll a dice once and return the value."""
-        random.seed()
+        #random.seed()
         # these variables will be different for each instance
         self.roll_made = 0
         self.sum_of_rolls = 0
 
-    '''
-    def set_faces(self, faces):
-
-        """Determine how many faces to set on the dice"""
-        self.faces = faces
-        print(f"The faces of the dice are now: {self.faces}")
-    '''
 
 
     def roll(self):
@@ -34,6 +36,7 @@ class Dice():
         #Making random number between 1-6 and adding the value
         roll = random.randint(1,6)
         self.sum_of_rolls += roll
+
         return roll
 
 

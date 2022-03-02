@@ -17,6 +17,16 @@ class testPlayerClass():
 
     
     def test_change_name(self):
+        """testing to change the name"""
+
+        player_object = player.Player("Mike")
+        exc = "kalle"
+
+        player_object.change_name(exc)
+
+        self.assertEqua(exc, player_object.get_name())
+
+
         
 
     
