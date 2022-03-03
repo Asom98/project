@@ -1,9 +1,9 @@
 """
-By useing this class we can creat an object that will let us use the object
-as a real dice. The object will have tow variables that will be used to control the roll
-made and the sum of the all roll made.
+This class create an object that will function as a real dice. 
+The object will have two variables that will be used to control the rolls
+made by the players and the sum of the all rolls that was made.
 
-you can easily roll a dice by using the function:
+By rolling the dice this function is used:
 
     roll()
     

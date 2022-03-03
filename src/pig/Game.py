@@ -30,14 +30,15 @@ def main():
 
 
 import Dice
-import diceHand
-import player
+import DiceHand
+import Player
 import HighScore
 
 def main():
 
     set_name = True
 
+<<<<<<< HEAD
     information()
 
     mode = game_mode() #choosing the game mode
@@ -140,38 +141,42 @@ def main():
 
         dice1 = Dice.Dice()
     diceHand1 = diceHand.DiceHand()
+=======
+    dice1 = Dice.Dice()
+    DiceHand1 = DiceHand.DiceHand()
+>>>>>>> 7014e2b80f881c76d0245a46c654f8af1cc4597c
 
-    diceHand1.add_dice(dice1.roll())
-    diceHand1.add_dice(dice1.roll())
-    diceHand1.add_dice(dice1.roll())
-    diceHand1.add_dice(dice1.roll())
-    diceHand1.add_dice(dice1.roll())
-    diceHand1.add_dice(dice1.roll())
-    diceHand1.add_dice(dice1.roll())
-    diceHand1.add_dice(dice1.roll())
+    DiceHand1.add_dice(dice1.roll())
+    DiceHand1.add_dice(dice1.roll())
+    DiceHand1.add_dice(dice1.roll())
+    DiceHand1.add_dice(dice1.roll())
+    DiceHand1.add_dice(dice1.roll())
+    DiceHand1.add_dice(dice1.roll())
+    DiceHand1.add_dice(dice1.roll())
+    DiceHand1.add_dice(dice1.roll())
 
-    #diceHand1.show_dice_hand()
+    #DiceHand1.show_dice_hand()
     print("  ")
     print("  ")
     dice2 = Dice.Dice()
-    diceHand2 = diceHand.DiceHand()
+    DiceHand2 = DiceHand.DiceHand()
 
-    diceHand1.add_dice(dice2.roll())
-    diceHand1.add_dice(dice2.roll())
-    diceHand1.add_dice(dice2.roll())
-    diceHand1.add_dice(dice2.roll())
-    diceHand1.add_dice(dice2.roll())
-    diceHand1.add_dice(dice2.roll())
-    diceHand1.add_dice(dice2.roll())
-    diceHand1.add_dice(dice2.roll())
+    DiceHand2.add_dice(dice2.roll())
+    DiceHand2.add_dice(dice2.roll())
+    DiceHand2.add_dice(dice2.roll())
+    DiceHand2.add_dice(dice2.roll())
+    DiceHand2.add_dice(dice2.roll())
+    DiceHand2.add_dice(dice2.roll())
+    DiceHand2.add_dice(dice2.roll())
+    DiceHand2.add_dice(dice2.roll())
 
-    #diceHand2.show_dice_hand()
+    #DiceHand2.show_dice_hand()
 
 
     high = HighScore.HighScore()
 
     
-    print(high.serach_for_high(diceHand1.dice_hand, diceHand2.dice_hand))
+    print(high.serach_for_high(DiceHand1.dice_hand, DiceHand2.dice_hand))
 
 
 
