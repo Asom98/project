@@ -29,16 +29,16 @@ def main():
 """
 
 
-import Dice
-import DiceHand
-import Player
-import HighScore
+import dice
+import diceHand
+import player
+import highScore
+
 
 def main():
 
     set_name = True
 
-<<<<<<< HEAD
     information()
 
     mode = game_mode() #choosing the game mode
@@ -141,10 +141,8 @@ def main():
 
         dice1 = Dice.Dice()
     diceHand1 = diceHand.DiceHand()
-=======
     dice1 = Dice.Dice()
     DiceHand1 = DiceHand.DiceHand()
->>>>>>> 7014e2b80f881c76d0245a46c654f8af1cc4597c
 
     DiceHand1.add_dice(dice1.roll())
     DiceHand1.add_dice(dice1.roll())
