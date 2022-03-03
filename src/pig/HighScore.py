@@ -1,18 +1,29 @@
 """keep track of highscore of the players"""
 
-def get_highscore():
-    highscore = 0
+class HighScore:
 
-    try:
-        highscore_file = open("highscore_txt")
-        highscore = int (highscore_file.read())
-        print("High score:" , highscore)
-        except IOError:
-            print("error reading the file, there is no highscore")
-            except ValueError:
-                print("")
-            return highscore
+    HighScore = 0
 
-def save highscore(new_highscore)
+    def serach_for_high(self,first_list, sec_list):
+        var1 = 0
+        var2 = 0
+
+        for x in first_list:
+            x += x
+            var1 = x
+
+        for y in first_list:
+            y += y
+            var2 = y
+
+        if var1 > var2:
+            self.HighScore = var1
+            return self.HighScore
+        else:
+            self.HighScore = var2
+            return self.HighScore 
+
+        
+
 
         
