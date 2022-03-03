@@ -18,9 +18,11 @@ class HighScore:
 
         if var1 > var2:
             self.HighScore = var1
+            print("firstplayer")
             return self.HighScore
         else:
             self.HighScore = var2
+            print("secondplayer")
             return self.HighScore 
 
         
