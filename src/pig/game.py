@@ -37,6 +37,7 @@ import highScore
 
 def main():
 
+
     set_name = True
 
     information()
@@ -58,13 +59,15 @@ def main():
             print        ("|")
             print        ("|")
 
+            dice1 = dice.Dice()
+
             player1 = player.Player(name1)
             player2 = player.Player(name2)
 
             diceHand1 = diceHand.DiceHand()
             diceHand2 = diceHand.DiceHand()
+    
 
-            dice = Dice.Dice()
 
             set_name = False
 
@@ -74,13 +77,13 @@ def main():
 
         while (want_roll):
 
-            print('" ', player1.get_name(),' "', "turn to roll a dice: ")
-            value1 = dice.roll()
+            print('(', player1.get_name(),')', "turn to roll a dice: ")
+            value1 = dice1.roll()
             print("You rolled: " , value1)
 
             if value1 == 1:
 
-                print("OBS! you have rolled a 1. All your point will be erased!")
+                print("OBS! you have rolled a 1. All your points will be erased!")
                 print("and it will be your opponent turn.")
                 print("|")
                 print("|")
@@ -93,7 +96,6 @@ def main():
                 print("|")
                 print("|")
                 if answer == "y":
-
                     continue
                 else:
 
@@ -105,13 +107,13 @@ def main():
 
         while (want_roll):
 
-            print('" ', player2.get_name(),' "', "turn to roll a dice: ")
-            value2 = dice.roll()
+            print('(', player2.get_name(),')', "turn to roll a dice: ")
+            value2 = dice1.roll()
             print("You rolled: " , value2)
 
             if value2 == 1:
 
-                print("OBS! you have rolled a 1. All your point will be erased!")
+                print("OBS! you have rolled a 1. All your points will be erased!")
                 print("and it will be your opponent turn.")
                 print("|")
                 print("|")
