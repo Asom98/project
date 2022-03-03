@@ -24,7 +24,7 @@ class DiceHand():
         """Here you will be able to add a rolled dice value to your dice hand"""
 
         #Adding the rolled dice value to dice_hand list
-        if dice_roll <= 1 or dice_roll > 6:
+        if dice_roll == 1:
 
             self.dice_hand = []
         else:

@@ -36,8 +36,109 @@ import HighScore
 
 def main():
 
+    set_name = True
 
-    dice1 = Dice.Dice()
+    information()
+
+    mode = game_mode() #choosing the game mode
+
+    while(mode == 1):  #player against AI
+
+        print("player against AI")
+        break
+
+    while(mode == 2):  #palyer vs another
+
+        while(set_name):
+            
+            name1 = input("First player! set a name here>> ")
+            name2 = input("Seconed player! set a name here>> ")
+            print        ("==================================")
+            print        ("|")
+            print        ("|")
+
+            player1 = player.Player(name1)
+            player2 = player.Player(name2)
+
+            diceHand1 = diceHand.DiceHand()
+            diceHand2 = diceHand.DiceHand()
+
+            dice = Dice.Dice()
+
+            set_name = False
+
+        
+        
+        want_roll = True
+
+        while (want_roll):
+
+            print('" ', player1.get_name(),' "', "turn to roll a dice: ")
+            value1 = dice.roll()
+            print("You rolled: " , value1)
+
+            if value1 == 1:
+
+                print("OBS! you have rolled a 1. All your point will be erased!")
+                print("and it will be your opponent turn.")
+                print("|")
+                print("|")
+                diceHand1.add_dice(value1)
+                want_roll = False
+            else:
+
+                diceHand1.add_dice(value1)
+                answer = input("Do you want to roll agin? y/yes, n/no >> ")
+                print("|")
+                print("|")
+                if answer == "y":
+
+                    continue
+                else:
+
+                    want_roll = False
+                    print("|")
+                    print("|")
+        
+        want_roll = True
+
+        while (want_roll):
+
+            print('" ', player2.get_name(),' "', "turn to roll a dice: ")
+            value2 = dice.roll()
+            print("You rolled: " , value2)
+
+            if value2 == 1:
+
+                print("OBS! you have rolled a 1. All your point will be erased!")
+                print("and it will be your opponent turn.")
+                print("|")
+                print("|")
+                diceHand2.add_dice(value2)
+                want_roll = False
+            else:
+                diceHand2.add_dice(value2)
+                answer = input("Do you want to roll agin? y/yes, n/no >> ")
+                print("")
+                print("")
+                if answer == "y":
+                    continue
+                else:
+                    want_roll = False
+                    print("")
+                    print("")
+
+    """
+    #palyer_playee1 = player.Player("Stina")
+
+    
+
+    
+
+
+
+
+        dice1 = Dice.Dice()
     diceHand1 = diceHand.DiceHand()
 
     diceHand1.add_dice(dice1.roll())
@@ -73,34 +174,6 @@ def main():
     print(high.serach_for_high(diceHand1.dice_hand, diceHand2.dice_hand))
 
 
-    
-
-    """
-
-
-    #palyer_playee1 = player.Player("Stina")
-
-    information()
-
-    mode = game_mode() #choosing the game mode
-
-    while(mode == 1):  #player against AI
-        print("player against AI")
-        break
-
-    while(mode == 2):  #palyer vs another
-        namn1 = input("ange ett name 1")
-        namn2 = input("ange ett name 2")
-
-        palyer_player1 = player.Player(namn1)
-        palyer_player2 = player.Player(namn2)
-
-
-        print(namn1, "turn:")
-
-        print("palyer vs another")
-        break
-
 
     """
 
@@ -132,11 +205,16 @@ def game_mode():
     #the func will return 1 or 2 which determines the game mode
     print("If you wanna play alone press (1). do you wanna play with another player press (2): ")
     print("")
-    choice = int(input("please enter 1 or 2 >> "))
+
+    try:
+        choice = int(input("please enter 1 or 2 >> "))
+    except ValueError:
+        print("You have entered a none integer value try again!")
+
 
     while(choice > 2 or choice <= 0):
         
-        choice = int(input("please enter 1 or 2 >> "))
+        choice = input("please enter 1 or 2 >> ")
     
     return choice
 
