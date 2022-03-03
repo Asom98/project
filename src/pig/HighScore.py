@@ -12,7 +12,7 @@ class HighScore:
             x += x
             var1 = x
 
-        for y in first_list:
+        for y in sec_list:
             y += y
             var2 = y
 

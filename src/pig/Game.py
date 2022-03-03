@@ -6,10 +6,10 @@ in the main function, those functions will be imported from the other classes in
 
 that will build the pig game!.
 
-"""
+
+
 
 import player
-<<<<<<< HEAD
 import pickle
 import os
 
@@ -26,16 +26,18 @@ def main():
             # player_laura is an instance of Player
             player_laura = pickle.load(f)
 
-    player1 = player.Player("Kassem")
-    print(player1.get_name())
-=======
-import dice
+"""
+
+
+import Dice
 import diceHand
+import player
+import HighScore
 
 def main():
 
-    
-    dice1 = dice.Dice()
+
+    dice1 = Dice.Dice()
     diceHand1 = diceHand.DiceHand()
 
     diceHand1.add_dice(dice1.roll())
@@ -47,12 +49,38 @@ def main():
     diceHand1.add_dice(dice1.roll())
     diceHand1.add_dice(dice1.roll())
 
+    #diceHand1.show_dice_hand()
+    print("  ")
+    print("  ")
+    dice2 = Dice.Dice()
+    diceHand2 = diceHand.DiceHand()
+
+    diceHand1.add_dice(dice2.roll())
+    diceHand1.add_dice(dice2.roll())
+    diceHand1.add_dice(dice2.roll())
+    diceHand1.add_dice(dice2.roll())
+    diceHand1.add_dice(dice2.roll())
+    diceHand1.add_dice(dice2.roll())
+    diceHand1.add_dice(dice2.roll())
+    diceHand1.add_dice(dice2.roll())
+
+    #diceHand2.show_dice_hand()
+
+
+    high = HighScore.HighScore()
+
+    
+    print(high.serach_for_high(diceHand1.dice_hand, diceHand2.dice_hand))
+
+
     
 
-    diceHand1.show_dice_hand()
-
     """
-        information()
+
+
+    #palyer_playee1 = player.Player("Stina")
+
+    information()
 
     mode = game_mode() #choosing the game mode
 
@@ -61,12 +89,20 @@ def main():
         break
 
     while(mode == 2):  #palyer vs another
+        namn1 = input("ange ett name 1")
+        namn2 = input("ange ett name 2")
+
+        palyer_player1 = player.Player(namn1)
+        palyer_player2 = player.Player(namn2)
+
+
+        print(namn1, "turn:")
+
         print("palyer vs another")
         break
+
+
     """
-
-
-    
 
 
 def information():
@@ -103,15 +139,7 @@ def game_mode():
         choice = int(input("please enter 1 or 2 >> "))
     
     return choice
->>>>>>> f26441d98f996c5987a3e857402b3e7eaef098b2
 
-
-<<<<<<< HEAD
-    player3 = player.Player("Simon")
-    print(player3.get_name())
-=======
-    
->>>>>>> f26441d98f996c5987a3e857402b3e7eaef098b2
 
 def play_turn():
     # A player rolls the die and gets a score
