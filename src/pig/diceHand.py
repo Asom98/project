@@ -18,7 +18,11 @@ Showing all the values will happen when calling the following function:
 class DiceHand():
     """DiceHand class is used to save every value of the dice when it's rolled"""
 
-    dice_hand = [] #list to save the values 
+    
+    def __init__(self):
+
+        self.dice_hand = []#list to save the values 
+        
 
 
     def add_dice(self, dice_roll):
@@ -28,6 +32,7 @@ class DiceHand():
         if dice_roll == 1:
 
             self.dice_hand = []
+            
         else:
 
             self.dice_hand.append(dice_roll)
@@ -51,7 +56,7 @@ class DiceHand():
         value = 0
 
         for x in self.dice_hand:
-            
+
             value += x
 
         return value
