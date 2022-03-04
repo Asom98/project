@@ -56,8 +56,9 @@ def main():
             name1 = input("First player! set a name here>> ")
             name2 = input("Seconed player! set a name here>> ")
             print        ("==================================")
-            print        ("|")
-            print        ("|")
+            print("")
+            print("=========================================================")
+            print("")
 
             dice1 = dice.Dice()
 
@@ -85,23 +86,26 @@ def main():
 
                 print("OBS! you have rolled a 1. All your points will be erased!")
                 print("and it will be your opponent turn.")
-                print("|")
-                print("|")
+                print("")
+                print("=========================================================")
+                print("")
                 diceHand1.add_dice(value1)
                 want_roll = False
             else:
 
                 diceHand1.add_dice(value1)
                 answer = input("Do you want to roll agin? y/yes, n/no >> ")
-                print("|")
-                print("|")
+                print("")
+                print("=========================================================")
+                print("")
                 if answer == "y":
                     continue
                 else:
 
                     want_roll = False
-                    print("|")
-                    print("|")
+                    print("")
+                    print("=========================================================")
+                    print("")
         
         want_roll = True
 
@@ -115,20 +119,23 @@ def main():
 
                 print("OBS! you have rolled a 1. All your points will be erased!")
                 print("and it will be your opponent turn.")
-                print("|")
-                print("|")
+                print("")
+                print("=========================================================")
+                print("")
                 diceHand2.add_dice(value2)
                 want_roll = False
             else:
                 diceHand2.add_dice(value2)
                 answer = input("Do you want to roll agin? y/yes, n/no >> ")
                 print("")
+                print("=========================================================")
                 print("")
                 if answer == "y":
                     continue
                 else:
                     want_roll = False
                     print("")
+                    print("=========================================================")
                     print("")
 
     """
