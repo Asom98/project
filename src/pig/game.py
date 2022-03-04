@@ -17,7 +17,7 @@ import highScore
 
 def main():
 
-    points_to_win = 20
+    points_to_win = 25
 
     set_name = True
 
@@ -30,6 +30,7 @@ def main():
         break
 
     while(mode == 2):  #palyer vs another
+        
         while(set_name):
             
             name1 = input("First player! Set your name here >> ")
