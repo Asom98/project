@@ -59,15 +59,23 @@ def main():
 
             if value1 == 1:
 
+                diceHand1.add_dice(value1)
                 print("OBS! you have rolled a 1. All your points will be erased!")
                 print("and it will be your opponent turn.")
+                diceHand1.show_dice_hand()
+                print("here is your sum points: ", diceHand1.sum())
+                
                 print("")
                 print("=========================================================")
                 print("")
-                diceHand1.add_dice(value1)
+                
                 want_roll = False
             else:
                 diceHand1.add_dice(value1)
+                print("here is your current dices")
+                diceHand1.show_dice_hand()
+                print("here is your sum points: ", diceHand1.sum())
+                
                 answer = input("Do you want to roll agin? y/yes, n/no >> ")
                 print("")
                 print("=========================================================")
@@ -91,13 +99,20 @@ def main():
             if value2 == 1:
                 print("OBS! you have rolled a 1. All your points will be erased!")
                 print("and it will be your opponent turn.")
+                diceHand2.add_dice(value2)
+                print("here is your current dices")
+                diceHand2.show_dice_hand()
+                print("here is your sum points: ", diceHand2.sum())
                 print("")
                 print("=========================================================")
                 print("")
-                diceHand2.add_dice(value2)
+                #diceHand2.add_dice(value2)
                 want_roll = False
             else:
                 diceHand2.add_dice(value2)
+                print("here is your current dices")
+                diceHand2.show_dice_hand()
+                print("here is your sum points: ", diceHand2.sum())
                 answer = input("Do you want to roll agin? y/yes, n/no >> ")
                 print("")
                 print("=========================================================")
@@ -136,7 +151,9 @@ def game_mode():
     """Here the player will choose to play with an AI or another player"""
 
     #the func will return 1 or 2 which determines the game mode
-    print("If you want to play alone press (1). If you want to play versus another player press (2): ")
+    print("Read the information above to understand the game!")
+    print("If you want to play alone press (1). ")
+    print("If you want to play versus another player press (2).")
     print("")
 
 

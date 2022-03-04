@@ -14,6 +14,7 @@ Showing all the values will happen when calling the following function:
 """
 
 
+
 class DiceHand():
     """DiceHand class is used to save every value of the dice when it's rolled"""
 
@@ -37,7 +38,22 @@ class DiceHand():
     def show_dice_hand(self):
         """In this function you will go throw all the rolled dice you have made and be able to se them"""
 
+        list = []
+
         #loping throw the dice_hand list and see all the values  
         for x in self.dice_hand:
-            print(x)
+            list.append(x)
+        
+        print(list)
+
+    def sum(self):
+
+        value = 0
+
+        for x in self.dice_hand:
+            
+            value += x
+
+        return value
+            
 
