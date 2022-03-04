@@ -17,6 +17,8 @@ import highScore
 
 def main():
 
+    points_to_win = 20
+
     set_name = True
 
     information()
@@ -56,33 +58,20 @@ def main():
             print("You rolled: " , value1)
 
             if value1 == 1:
-<<<<<<< HEAD
 
                 print("OBS! you have rolled a 1. All your points will be erased!")
                 print("and it will be your opponent turn.")
                 print("")
                 print("=========================================================")
                 print("")
-=======
-                print("OBS! You have rolled a 1. All your points will be erased!")
-                print("It is now your opponent's turn.")
-                print("|")
-                print("|")
->>>>>>> 62a6db304ac82b157de00ca76a568f37c2c9dcde
                 diceHand1.add_dice(value1)
                 want_roll = False
             else:
                 diceHand1.add_dice(value1)
                 answer = input("Do you want to roll agin? y/yes, n/no >> ")
-<<<<<<< HEAD
                 print("")
                 print("=========================================================")
                 print("")
-=======
-                print("|")
-                print("|")
-
->>>>>>> 62a6db304ac82b157de00ca76a568f37c2c9dcde
                 if answer == "y":
                     continue
                 else:
