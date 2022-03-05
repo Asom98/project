@@ -11,6 +11,7 @@ that will build the pig game!.
 
 import dice
 import diceHand
+import intelligence
 import player
 import highScore
 
@@ -26,18 +27,43 @@ def main():
 
     mode = game_mode() #choosing the game mode
 
-    while(mode == 1):  #player against AI
-        print("Player against AI")
-        break
-
-
     while game_on:
 
-        while(mode == 2):  #palyer vs another
-
+        while(mode == 1):  #player against AI
             
             while(set_name):
+                print("Player against AI")
+                name = input("First player! Set your name here >> ")
+                print        ("==================================")
+                print("")
+                print("==================================")
+                print("")
                 
+                #set game difficulty
+                computer = intelligence.Intelligence()
+                difficulty = int(input("Choose your desired difficulty level. \nPress (1) for normal. \nPress (2) for hard."))
+
+
+                if difficulty == 1:
+                    computer.normal_difficulty()
+                    break
+                elif difficulty == 2:
+                    computer.hard_difficulty()
+                    break
+
+
+                dice1 = dice.Dice()
+                player1 = player.Player(name)                
+                diceHand1 = diceHand.DiceHand()
+                diceHand2 = diceHand.DiceHand()
+                
+            set_name = False
+
+
+        while(mode == 2):  #palyer vs another
+            print("Player against Player")
+            
+            while(set_name):
                 name1 = input("First player! Set your name here >> ")
                 name2 = input("Second player! Set your name here >> ")
                 print        ("==================================")

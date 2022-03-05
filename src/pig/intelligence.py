@@ -10,24 +10,31 @@ Stopping it's turn faster than it's normal counterpart.
 
 """
 
-# AI always has the same name
-
-name = "Computer"
-
 class Intelligence():
 
+    # AI always has the same name
 
     def __init__(self):
         pass
 
-    # Behavior for normal difficulty AI
-    def normal_difficulty():
-        pass
-
-    # Behavior for hard difficulty AI
-    def hard_difficulty():
-        pass
 
     # General behavior
-    def action():
-        pass
+    def action(self, roll):
+        print(f"Computer rolls a: {roll}")
+
+
+    # Behavior for normal difficulty AI
+    def normal_difficulty(self):
+        print("You have picked 'normal' difficulty!")
+        
+        
+
+    # Behavior for hard difficulty AI
+    def hard_difficulty(self):
+        print("You have picked 'hard' difficulty!")
+        
+        
+
+
+
+
