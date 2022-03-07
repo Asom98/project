@@ -25,6 +25,10 @@ class testPlayerClass():
         player_object.change_name(exc)
 
         self.assertEqua(exc, player_object.get_name())
+        
+    
+if __name__ == '__main__':
+        unittest.main()
 
 
         

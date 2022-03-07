@@ -16,8 +16,7 @@ class Dice():
     """
     Dice class that will allow us to make an instances of a reall dice.
     """
-    intro = "***PIG GAME, let's play***\n"
-    
+
 
     def __init__(self):
 

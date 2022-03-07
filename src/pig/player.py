@@ -9,7 +9,7 @@ when ever they want
 """
 
 import unittest
-import player
+
 
 class Player():
     """Player class"""
@@ -31,9 +31,6 @@ class Player():
     def get_name(self):
         """Getting the name of the player"""
         return self.name
-    
-    if __name__ == '__main__':
-        unittest.main()
 
 
     

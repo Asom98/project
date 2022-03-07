@@ -16,15 +16,6 @@ class testDiceClass():
         #  if the object is instance of Dice class
         self.assertIsInstance(dice_object, dice.Dice)
 
-    
-    def test_number_of_faces(self):
-        """Testing that the dice has 6 faces"""
-        #Making an abject of Dice class
-        dice_object = dice.Dice()
-
-        #Testing if the dice object has right number of faces
-        self.assertEqual(dice_object.faces, 6)
-
 
     def test_roll_dice(self):
         """Testing that you can roll a dice and get from 1-6 from the rolled dice"""
