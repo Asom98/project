@@ -6,6 +6,13 @@ PYTHON ?= python # python3 py
 # Print out colored action message
 MESSAGE = printf "\033[32;01m---> $(1)\033[0m\n"
 
+# To make targets in each directory under the src/
+define FOREACH
+    for DIR in src/*; do \
+        $(MAKE) -C $$DIR $(1); \
+    done
+endef
+
 all:
 
 
@@ -44,88 +51,23 @@ clean:
 clean-doc:
 	rm -rf doc
 
-clean-all: clean clean-doc
+clean-src:
+	$(call FOREACH,clean)
+
+clean-all: clean clean-doc clean-src
 	rm -rf .venv
 
 
 # ---------------------------------------------------------
-# Work with static code linters.
+# Test all the code at once.
 #
 pylint:
-	@$(call MESSAGE,$@)
-	-pylint *.py
+	$(call FOREACH,pylint)
 
 flake8:
-	@$(call MESSAGE,$@)
-	-flake8
+	$(call FOREACH,flake8)
 
 lint: flake8 pylint
 
-
-# ---------------------------------------------------------
-# Work with unit test and code coverage.
-#
-unittest:
-	@$(call MESSAGE,$@)
-	 $(PYTHON) -m unittest discover . "*_test.py"
-
-coverage:
-	@$(call MESSAGE,$@)
-	coverage run -m unittest discover . "*_test.py"
-	coverage html
-	coverage report -m
-
-test: lint coverage
-
-
-# ---------------------------------------------------------
-# Work with generating documentation.
-#
-.PHONY: pydoc
-pydoc:
-	install -d doc/pydoc
-	$(PYTHON) -m pydoc -w "$(PWD)"
-	mv *.html doc/pydoc
-
-pdoc:
-	rm -rf doc/pdoc
-	pdoc --html -o doc/pdoc .
-
-doc: pdoc pyreverse #pydoc sphinx
-
-pyreverse:
-	install -d doc/pyreverse
-	pyreverse *.py
-	dot -Tpng classes.dot -o doc/pyreverse/classes.png
-	dot -Tpng packages.dot -o doc/pyreverse/packages.png
-	rm -f classes.dot packages.dot
-	ls -l doc/pyreverse
-
-
-# ---------------------------------------------------------
-# Calculate software metrics for your project.
-#
-radon-cc:
-	@$(call MESSAGE,$@)
-	radon cc . -a
-
-radon-mi:
-	@$(call MESSAGE,$@)
-	radon mi .
-
-radon-raw:
-	@$(call MESSAGE,$@)
-	radon raw .
-
-radon-hal:
-	@$(call MESSAGE,$@)
-	radon hal .
-
-metrics: radon-cc radon-mi radon-raw radon-hal
-
-
-# ---------------------------------------------------------
-# Find security issues in your project.
-#
-bandit:
-	bandit -r .
+test:
+	$(call FOREACH,test)

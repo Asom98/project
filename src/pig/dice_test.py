@@ -24,7 +24,7 @@ class testDiceClass(unittest.TestCase):
 
         #Testing if the rolled face is between 1-6
         res = dice_object.roll()
-        exp = 1 <= res <= dice_object.faces
+        exp = 1 <= res <= 6
         self.assertTrue(exp)
 
 

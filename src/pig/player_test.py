@@ -13,7 +13,7 @@ class testPlayerClass(unittest.TestCase):
 
         #Testing with the appropriate assert functions
         #  if the object is instance of player class
-        self.asserIsInstance(player_object, player.Player)
+        self.assertIsInstance(player_object, player.Player)
 
     
     def test_change_name(self):

@@ -11,37 +11,37 @@ class testDiceHandClass(unittest.TestCase):
 
         #Making an abject of dice_hand class
         dicehand_object = diceHand.DiceHand() 
-        self.asserIsInstance(dicehand_object, diceHand.DiceHand)
+        self.assertIsInstance(dicehand_object, diceHand.DiceHand)
 
     
     def test_add_dice(self):
         """testing if we could add a dice to the dice_hand list"""
 
         dicehand_object = diceHand.DiceHand()
-        dicehand_object.add_dice(1)
+        dicehand_object.dice_hand.append(1)
 
-        exp = dicehand_object.dice_hand.count()
+        exp = dicehand_object.dice_hand[0]
 
-        self.assertEqual(exp, 1)
+        self.assertEqual(1, exp)
 
 
     def test_Show_dice_hand(self):
         """testing if we could get all the values inside the list"""
 
         dicehand_object = diceHand.DiceHand()
-        dicehand_object.add_dice(1)
+        dicehand_object.dice_hand.append(1)
 
-        exp = dicehand_object[0] == 1
+        exp = dicehand_object.dice_hand[0]
 
-        self.assertTrue(exp)
+        self.assertEqual(1, exp)
 
     
     def test_sum(self):
         """testing if we could get the sum of values inside the list"""
 
         dicehand_object = diceHand.DiceHand()
-        dicehand_object.add_dice(1)
-        dicehand_object.add_dice(1)
+        dicehand_object.dice_hand.append(1)
+        dicehand_object.dice_hand.append(1)
 
         exp = 2
 
