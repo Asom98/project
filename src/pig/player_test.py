@@ -4,11 +4,11 @@ import unittest
 import player
 
 
-class testPlayerClass():
+class testPlayerClass(unittest.TestCase):
     """Testing the Player class"""
 
     def test_init_default_object(self):
-        #Making an abject of player class
+        #Making an abject of player class with the name Mike
         player_object = player.Player("Mike")
 
         #Testing with the appropriate assert functions
@@ -17,21 +17,18 @@ class testPlayerClass():
 
     
     def test_change_name(self):
-        """testing to change the name"""
-
+        #Making an abject of player class with the name Mike
         player_object = player.Player("Mike")
-        exc = "kalle"
-
-        player_object.change_name(exc)
-
-        self.assertEqua(exc, player_object.get_name())
         
-    
+        #Creating seconed name to be changed to
+        sec_name = "Andy"
+        player_object.change_name(sec_name)
+        self.assertEqual(player_object.get_name(), sec_name)
+
+
 if __name__ == '__main__':
-        unittest.main()
+    unittest.main()
 
-
-        
 
     
 

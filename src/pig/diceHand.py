@@ -22,8 +22,7 @@ class DiceHand():
     def __init__(self):
 
         self.dice_hand = []#list to save the values 
-        
-
+    
 
     def add_dice(self, dice_roll):
         """Here you will be able to add a rolled dice value to your dice hand"""
@@ -38,8 +37,6 @@ class DiceHand():
             self.dice_hand.append(dice_roll)
         
         
-
-
     def show_dice_hand(self):
         """In this function you will go throw all the rolled dice you have made and be able to se them"""
 
@@ -51,8 +48,9 @@ class DiceHand():
         
         print(list)
 
-    def sum(self):
 
+    def sum(self):
+        """adding all the values inside the list and returning the sum value"""
         value = 0
 
         for x in self.dice_hand:

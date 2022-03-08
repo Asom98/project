@@ -8,18 +8,13 @@ Each player will have a name and will be able to change their name
 when ever they want
 """
 
-import unittest
-
-
 class Player():
     """Player class"""
-
-        
     
     def __init__(self, name):
         """Make an instance of the player class"""
         #Name of the player
-        self.name = name
+        self.name = name 
     
 
     def change_name(self, name):

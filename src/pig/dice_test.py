@@ -3,7 +3,7 @@
 import unittest
 import dice
 
-class testDiceClass():
+class testDiceClass(unittest.TestCase):
     """Testing the dice class"""
 
     def test_init_default_object(self):
@@ -29,5 +29,5 @@ class testDiceClass():
 
 
 if __name__ == '__main__':
-    unittest.main()  
+    unittest.main()
 
