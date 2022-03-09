@@ -20,18 +20,13 @@ class Intelligence():
         pass
     
 
-    # General behavior
-    # This function might not be needed. Keeping it for now
-    def action(self, roll):
-        print(f"Computer rolls a: {roll}")
-
-
     # Behavior for normal difficulty AI
     def normal_difficulty(self):
         """Picking this option sets ai name to 'Computer (Normal)"""
         """This difficulty has the same rolling behaviour as player"""
 
         print("You have picked 'normal' difficulty!")
+        
                 
 
     # Behavior for hard difficulty AI
@@ -40,13 +35,14 @@ class Intelligence():
         """This difficulty is almost impossible to beat. It can only roll a 5 or 6"""
 
         print("You have picked 'hard' difficulty!")
+        
     
     
     def hard_roll(self):
         """Roll a dice and return result face value"""
         
         #Making random number between 4-6 and adding the value to be hard for the player
-        list = [1,5,6]
+        list = [1,5,5,6]
         roll = random.choice(list)
         
         return roll

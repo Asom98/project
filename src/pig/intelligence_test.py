@@ -6,6 +6,7 @@
 
 
 import unittest
+import random
 import intelligence
 
 
@@ -21,10 +22,14 @@ class testIntelligenceClass(unittest.TestCase):
         self.assertIsInstance(intelligence_object, intelligence.Dice)
 
 
-    def test_action(self):
+    def test_hard_roll(self):
         """Testing something"""
         #Making an abject of Intelligence class
         intelligence_object = intelligence.Intelligence()
+
+        list = [1, 5, 5, 6]
+        roll = random.choice(list)
+        self.assertIn(roll, list)
 
 
 if __name__ == '__main__':
