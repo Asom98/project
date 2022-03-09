@@ -9,7 +9,7 @@ Ex. if the computer manages to collect enough points, it should stop rolling.
 Possibility of having the harder difficulty AI be more risk-averse.
 Stopping it's turn faster than it's normal counterpart.
 """
-
+import random
 import dice
 
 
@@ -40,6 +40,17 @@ class Intelligence():
         """This difficulty is almost impossible to beat. It can only roll a 5 or 6"""
 
         print("You have picked 'hard' difficulty!")
+
+    
+    def hard_roll(self):
+        """Roll a dice and return result face value"""
+        
+        self.roll_made +=1
+        #Making random number between 4-6 and adding the value
+        roll = random.randint(4,6)
+        self.sum_of_rolls += roll
+
+        return roll
         
         
     def get_name(self):
