@@ -4,7 +4,7 @@
 # testing the function from the high score class to see which has the high score.
 
 import unittest
-from highScore import HighScore
+import highScore
 
 class testhighScore(unittest.TestCase): 
     def testForHighScore(self):
@@ -12,10 +12,11 @@ class testhighScore(unittest.TestCase):
         var2 = [3,4,5]
 
         # Making an object of the Highscore class
-        highscore = HighScore()
-
+        highscore_object = highScore.HighScore()
+        
+        
         # Testing the function search_for_high from the highscore class
-        self.assertEqual(highscore.serach_for_high(var1,var2),12)
+        self.assertEqual(highscore_object.serach_for_high(var2,var1),12)
 
 if __name__ == '__main__':
     unittest.main()  

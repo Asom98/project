@@ -24,6 +24,7 @@ def main():
     game_on = True
 
     information()
+    
 
     mode = game_mode() #choosing the game mode
 
@@ -50,6 +51,7 @@ def main():
                 elif difficulty == 2:
                     computer.hard_difficulty()
                     break
+                
 
 
                 dice1 = dice.Dice()

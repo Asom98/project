@@ -9,17 +9,18 @@ class HighScore:
         var2 = 0
 
         for x in first_list:
-            x += x
-            var1 = x
+
+            var1 += x
+            
 
         for y in sec_list:
-            y += y
-            var2 = y
+            
+            var2 += y
+            
 
         if var1 > var2:
             
             self.HighScore = var1
-            print("player")
             return self.HighScore
         else:
 
