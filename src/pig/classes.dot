@@ -1,0 +1,14 @@
+digraph "classes" {
+rankdir=BT
+charset="utf-8"
+"dice.Dice" [color="black", fontcolor="black", label="{Dice|roll_made : int\lsum_of_rolls : int\l|roll()\l}", shape="record", style="solid"];
+"diceHand.DiceHand" [color="black", fontcolor="black", label="{DiceHand|dice_hand : list\l|add_dice(dice_roll)\lshow_dice_hand()\lsum()\l}", shape="record", style="solid"];
+"highScore.HighScore" [color="black", fontcolor="black", label="{HighScore|HighScore : int\lHighScore : int\l|serach_for_high(first_list, sec_list)\l}", shape="record", style="solid"];
+"intelligence.Intelligence" [color="black", fontcolor="black", label="{Intelligence|\l|hard_difficulty()\lhard_roll()\lnormal_difficulty()\l}", shape="record", style="solid"];
+"player.Player" [color="black", fontcolor="black", label="{Player|name\l|change_name(name)\lget_name()\l}", shape="record", style="solid"];
+"dice_test.testDiceClass" [color="black", fontcolor="black", label="{testDiceClass|\l|test_init_default_object()\ltest_roll_dice()\l}", shape="record", style="solid"];
+"diceHand_test.testDiceHandClass" [color="black", fontcolor="black", label="{testDiceHandClass|\l|test_Show_dice_hand()\ltest_add_dice()\ltest_init_default_object()\ltest_sum()\l}", shape="record", style="solid"];
+"intelligence_test.testIntelligenceClass" [color="black", fontcolor="black", label="{testIntelligenceClass|\l|test_hard_roll()\ltest_init_default_object()\l}", shape="record", style="solid"];
+"player_test.testPlayerClass" [color="black", fontcolor="black", label="{testPlayerClass|\l|test_change_name()\ltest_init_default_object()\l}", shape="record", style="solid"];
+"highScore_test.testhighScore" [color="black", fontcolor="black", label="{testhighScore|\l|testForHighScore()\l}", shape="record", style="solid"];
+}

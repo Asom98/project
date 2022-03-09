@@ -19,7 +19,7 @@ class testIntelligenceClass(unittest.TestCase):
         intelligence_object = intelligence.Intelligence()
 
         # Testing if the object is instance of Intelligence class
-        self.assertIsInstance(intelligence_object, intelligence.Dice)
+        self.assertIsInstance(intelligence_object, intelligence.Intelligence)
 
 
     def test_hard_roll(self):

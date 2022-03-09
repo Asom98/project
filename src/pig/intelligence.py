@@ -10,7 +10,6 @@ Possibility of having the harder difficulty AI be more risk-averse.
 Stopping it's turn faster than it's normal counterpart.
 """
 import random
-import dice
 
 
 class Intelligence():

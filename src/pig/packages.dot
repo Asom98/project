@@ -1,0 +1,15 @@
+digraph "packages" {
+rankdir=BT
+charset="utf-8"
+"dice" [color="black", label="dice", shape="box", style="solid"];
+"diceHand" [color="black", label="diceHand", shape="box", style="solid"];
+"diceHand_test" [color="black", label="diceHand_test", shape="box", style="solid"];
+"dice_test" [color="black", label="dice_test", shape="box", style="solid"];
+"game" [color="black", label="game", shape="box", style="solid"];
+"highScore" [color="black", label="highScore", shape="box", style="solid"];
+"highScore_test" [color="black", label="highScore_test", shape="box", style="solid"];
+"intelligence" [color="black", label="intelligence", shape="box", style="solid"];
+"intelligence_test" [color="black", label="intelligence_test", shape="box", style="solid"];
+"player" [color="black", label="player", shape="box", style="solid"];
+"player_test" [color="black", label="player_test", shape="box", style="solid"];
+}
