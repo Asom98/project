@@ -15,6 +15,7 @@ class testhighScore(unittest.TestCase):
         highscore_object = highScore.HighScore()
         
         
+        
         # Testing the function search_for_high from the highscore class
         self.assertEqual(highscore_object.serach_for_high(var2,var1),12)
 

@@ -32,6 +32,7 @@ class Intelligence():
         """This difficulty has the same rolling behaviour as player"""
 
         print("You have picked 'normal' difficulty!")
+        return "Computer (Normal)"
                 
 
     # Behavior for hard difficulty AI
@@ -40,16 +41,16 @@ class Intelligence():
         """This difficulty is almost impossible to beat. It can only roll a 5 or 6"""
 
         print("You have picked 'hard' difficulty!")
+        return "Computer (Hard)"
 
     
     def hard_roll(self):
         """Roll a dice and return result face value"""
         
-        self.roll_made +=1
-        #Making random number between 4-6 and adding the value
-        roll = random.randint(4,6)
-        self.sum_of_rolls += roll
-
+        #Making random number between 4-6 and adding the value to be hard for the player
+        list = [1,5,6]
+        roll = random.choice(list)
+        
         return roll
         
         
