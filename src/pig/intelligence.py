@@ -15,10 +15,10 @@ import dice
 
 class Intelligence():
 
-    def __init__(self, name):
+    def __init__(self):
         # name can be 'Computer (Normal) or Computer (Hard)
-        self.name = name 
-
+        pass
+    
 
     # General behavior
     # This function might not be needed. Keeping it for now
@@ -32,7 +32,6 @@ class Intelligence():
         """This difficulty has the same rolling behaviour as player"""
 
         print("You have picked 'normal' difficulty!")
-        return "Computer (Normal)"
                 
 
     # Behavior for hard difficulty AI
@@ -41,8 +40,7 @@ class Intelligence():
         """This difficulty is almost impossible to beat. It can only roll a 5 or 6"""
 
         print("You have picked 'hard' difficulty!")
-        return "Computer (Hard)"
-
+    
     
     def hard_roll(self):
         """Roll a dice and return result face value"""
@@ -52,9 +50,4 @@ class Intelligence():
         roll = random.choice(list)
         
         return roll
-        
-        
-    def get_name(self):
-        """Getting the name for displaying ai difficulty"""
-
-        return self.name
+    

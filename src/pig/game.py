@@ -48,15 +48,15 @@ def main():
                 
                 #set game difficulty
                 difficulty = int(input("Choose your desired difficulty level. \nPress (1) for normal. \nPress (2) for hard."))
+                computer = intelligence.Intelligence()
 
                 if difficulty == 1:
                     computer.normal_difficulty()
-                    break
                 elif difficulty == 2:
                     computer.hard_difficulty()
-                    break
                     
-                computer = intelligence.Intelligence(difficulty)
+                    
+                
 
                 set_name = False
 
@@ -94,22 +94,22 @@ def main():
                         want_roll = False
                         break
 
-                answer = input("Do you want to roll agin? y/yes, n/no, c/change name, $/to cheat >> ")
-                print("")
-                print("==================================")
-                print("")
-                if answer == "y":
-                    continue
-                elif answer == "c":
-                    new_name = input("Enter a new name please >> ")
-                    player1.change_name(new_name)
-                elif answer == "$":
-                    diceHand1.add_dice(10)
-                else:
-                    want_roll = False
+                    answer = input("Do you want to roll agin? y/yes, n/no, c/change name, $/to cheat >> ")
                     print("")
                     print("==================================")
                     print("")
+                    if answer == "y":
+                        continue
+                    elif answer == "c":
+                        new_name = input("Enter a new name please >> ")
+                        player1.change_name(new_name)
+                    elif answer == "$":
+                        diceHand1.add_dice(10)
+                    else:
+                        want_roll = False
+                        print("")
+                        print("==================================")
+                        print("")
 
             if mode == 1:
                 want_roll = True
@@ -118,7 +118,7 @@ def main():
             
             while (want_roll):
 
-                print('(', computer.get_name(),')', "turn to roll a dice: ")
+                print("Computer turn to roll a dice: ")
                 value2 = computer.hard_roll()
                 print("You rolled: " , value2)
 
@@ -148,13 +148,13 @@ def main():
                         break
 
 
-        answer1 = input("Do you want to play again? y/yes, n/no >> ")
-        if answer1 == "y":
-            mode = 1 
-            set_name = True
-        else:
-            print("See you again! thanks for playing.")
-            game_on = False
+            answer1 = input("Do you want to play again? y/yes, n/no >> ")
+            if answer1 == "y":
+                mode = 1 
+                set_name = True
+            else:
+                print("See you again! thanks for playing.")
+                game_on = False
 
 
         while(mode == 2):  #palyer vs another
@@ -283,13 +283,13 @@ def main():
                         print("==================================")
                         print("")
 
-        answer1 = input("Do you want to play again? y/yes, n/no >> ")
-        if answer1 == "y":
-            mode = 2 
-            set_name = True
-        else:
-            print("See you again! thanks for playing.")
-            game_on = False
+            answer1 = input("Do you want to play again? y/yes, n/no >> ")
+            if answer1 == "y":
+                mode = 2 
+                set_name = True
+            else:
+                print("See you again! thanks for playing.")
+                game_on = False
 
 
 
