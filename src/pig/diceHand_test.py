@@ -18,11 +18,11 @@ class testDiceHandClass(unittest.TestCase):
         """testing if we could add a dice to the dice_hand list"""
 
         dicehand_object = diceHand.DiceHand()
-        dicehand_object.dice_hand.append(1)
+        dicehand_object.add_dice(5)
+        
+        var = dicehand_object.show_dice_hand()
 
-        exp = dicehand_object.dice_hand[0]
-
-        self.assertEqual(1, exp)
+        self.assertIn(5, var)
 
 
     def test_Show_dice_hand(self):
@@ -31,9 +31,7 @@ class testDiceHandClass(unittest.TestCase):
         dicehand_object = diceHand.DiceHand()
         dicehand_object.dice_hand.append(1)
 
-        exp = dicehand_object.dice_hand[0]
-
-        self.assertEqual(1, exp)
+        self.assertEqual([1], dicehand_object.show_dice_hand())
 
     
     def test_sum(self):

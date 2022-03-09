@@ -21,10 +21,12 @@ class HighScore:
         if var1 > var2:
             
             self.HighScore = var1
+           #print("dice hand 1")
             return self.HighScore
         else:
 
             self.HighScore = var2
+            #print("dice hand 2")
             return self.HighScore 
 
         

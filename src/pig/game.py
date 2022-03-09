@@ -13,10 +13,10 @@ import dice
 import diceHand
 import intelligence
 import player
-import highScore
 
 
 def main():
+
 
     points_to_win = 25
 
@@ -75,7 +75,7 @@ def main():
                         diceHand1.add_dice(value1)
                         print("OBS! you have rolled a 1. All your points will be erased!")
                         print("and it will be your opponent turn.")
-                        diceHand1.show_dice_hand()
+                        print(diceHand1.show_dice_hand())
                         print("here is your sum points: ", diceHand1.sum())
                         
                         print("")
@@ -86,7 +86,7 @@ def main():
                     else:
                         diceHand1.add_dice(value1)
                         print("here is your current dices")
-                        diceHand1.show_dice_hand()
+                        print(diceHand1.show_dice_hand())
                         print("here is your sum points: ", diceHand1.sum())
                         if diceHand1.sum() >= points_to_win:
                             print("Congrats! ", player1.get_name(), "won the game.")
@@ -131,7 +131,7 @@ def main():
                         print("and it will be player's turn.")
                         diceHand2.add_dice(value2)
                         print("here is computer's current dices")
-                        diceHand2.show_dice_hand()
+                        print(diceHand2.show_dice_hand())
                         print("here is computer's sum points: ", diceHand2.sum())
                         print("")
                         print("==================================")
@@ -140,7 +140,7 @@ def main():
                     else:
                         diceHand2.add_dice(value2)
                         print("here is computer's current dices")
-                        diceHand2.show_dice_hand()
+                        print(diceHand2.show_dice_hand())
                         print("here is computer's sum points: ", diceHand2.sum())
                         print("")
                         print("==================================")
@@ -169,7 +169,7 @@ def main():
                         diceHand1.add_dice(value1)
                         print("OBS! you have rolled a 1. All your points will be erased!")
                         print("and it will be your opponent turn.")
-                        diceHand1.show_dice_hand()
+                        print(diceHand1.show_dice_hand())
                         print("here is your sum points: ", diceHand1.sum())
                         
                         print("")
@@ -180,7 +180,7 @@ def main():
                     else:
                         diceHand1.add_dice(value1)
                         print("here is your current dices")
-                        diceHand1.show_dice_hand()
+                        print(diceHand1.show_dice_hand())
                         print("here is your sum points: ", diceHand1.sum())
                         if diceHand1.sum() >= points_to_win:
                             print("Congrats! ", player1.get_name(), "won the game.")
@@ -225,7 +225,7 @@ def main():
                         print("and it will be player's turn.")
                         diceHand2.add_dice(value2)
                         print("here is computer's current dices")
-                        diceHand2.show_dice_hand()
+                        print(diceHand2.show_dice_hand())
                         print("here is computer's sum points: ", diceHand2.sum())
                         print("")
                         print("==================================")
@@ -234,7 +234,7 @@ def main():
                     else:
                         diceHand2.add_dice(value2)
                         print("here is computer's current dices")
-                        diceHand2.show_dice_hand()
+                        print(diceHand2.show_dice_hand())
                         print("here is computer's sum points: ", diceHand2.sum())
                         print("")
                         print("==================================")
@@ -248,17 +248,6 @@ def main():
                             difficulty = 0
                             want_roll = False
                             break
-
-           
-
-
-        """ answer1 = input("Do you want to play again? y/yes, n/no >> ")
-        if answer1 == "y":
-            mode = 1 
-            set_name = True
-        else:
-            print("See you again! thanks for playing.")
-            game_on = False """
 
 
         while(mode == 2):  #palyer vs another
@@ -294,7 +283,7 @@ def main():
                     diceHand1.add_dice(value1)
                     print("OBS! you have rolled a 1. All your points will be erased!")
                     print("and it will be your opponent turn.")
-                    diceHand1.show_dice_hand()
+                    print(diceHand1.show_dice_hand())
                     print("here is your sum points: ", diceHand1.sum())
                     
                     print("")
@@ -305,7 +294,7 @@ def main():
                 else:
                     diceHand1.add_dice(value1)
                     print("here is your current dices")
-                    diceHand1.show_dice_hand()
+                    print(diceHand1.show_dice_hand())
                     print("here is your sum points: ", diceHand1.sum())
                     if diceHand1.sum() >= points_to_win:
                         print("Congrats! ", player1.get_name(), "won the game.")
@@ -315,7 +304,7 @@ def main():
                         mode = 0
                         want_roll = False
                         break
-                    
+
                     answer = input("Do you want to roll agin? y/yes, n/no, c/change name, $/to cheat >> ")
                     print("")
                     print("==================================")
@@ -332,7 +321,7 @@ def main():
                         print("")
                         print("==================================")
                         print("")
-            
+
             if mode == 2:
                 want_roll = True
             else:
@@ -349,7 +338,7 @@ def main():
                     print("and it will be your opponent turn.")
                     diceHand2.add_dice(value2)
                     print("here is your current dices")
-                    diceHand2.show_dice_hand()
+                    print(diceHand2.show_dice_hand())
                     print("here is your sum points: ", diceHand2.sum())
                     print("")
                     print("==================================")
@@ -358,7 +347,7 @@ def main():
                 else:
                     diceHand2.add_dice(value2)
                     print("here is your current dices")
-                    diceHand2.show_dice_hand()
+                    print(diceHand2.show_dice_hand())
                     print("here is your sum points: ", diceHand2.sum())
                     if diceHand2.sum() >= points_to_win:
                         print("Congrats! ", player2.get_name(), "won the game.")
@@ -368,7 +357,6 @@ def main():
                         mode = 0
                         want_roll = False
                         break
-
 
                     answer = input("Do you want to roll agin? y/yes, n/no, c/change name, $/to cheat >> ")
                     print("")
@@ -396,7 +384,6 @@ def main():
             game_on = False
 
 
-
 def information():
     """In this function will all the information needed to play the game be printed"""
 
@@ -414,7 +401,6 @@ def information():
     print("")
     print("======================= Enjoy =======================")
     print("")
-
 
 
 def game_mode():

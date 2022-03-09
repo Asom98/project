@@ -46,7 +46,7 @@ class DiceHand():
         for x in self.dice_hand:
             list.append(x)
         
-        print(list)
+        return list
 
 
     def sum(self):
