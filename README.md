@@ -19,7 +19,7 @@ sum of total turns.</p>
 <br>v7.0.0 https://github.com/Asom98/project/releases/tag/v7.0.0</br>
 <br>v8.0.0 https://github.com/Asom98/project/releases/tag/v8.0.0</br>
 <br>v9.0.0 https://github.com/Asom98/project/releases/tag/v9.0.0</br>
-<br>v10.0.0</br>
+<br>v10.0.0 https://github.com/Asom98/project/releases/tag/v10.0.0</br>
 
 
 # Intelligence
