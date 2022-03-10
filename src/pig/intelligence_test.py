@@ -23,13 +23,27 @@ class testIntelligenceClass(unittest.TestCase):
 
 
     def test_hard_roll(self):
-        """Testing something"""
+        """Testing to get a professional roll"""
         #Making an abject of Intelligence class
         intelligence_object = intelligence.Intelligence()
 
         list = [1, 5, 5, 6]
         roll = random.choice(list)
         self.assertIn(roll, list)
+
+
+    def test_normal_def(self):
+        """testing the print method"""
+        intelligence_obj = intelligence.Intelligence()
+        
+        self.assertIsNone(intelligence_obj.normal_difficulty())
+
+
+    def test_hard_def(self):
+        """testing the print method"""
+        intelligence_obj = intelligence.Intelligence()
+        
+        self.assertIsNone(intelligence_obj.hard_difficulty())
 
 
 if __name__ == '__main__':
