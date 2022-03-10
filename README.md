@@ -13,23 +13,34 @@ sum of total turns.</p>
 <br>v1.0.0 https://github.com/Asom98/project/releases/tag/v1.0.0</br>
 <br>v2.0.0 https://github.com/Asom98/project/releases/tag/v2.0.0</br>
 <br>v3.0.0 https://github.com/Asom98/project/releases/tag/v3.0.0</br>
-<br>v4.0.0</br>
-<br>v5.0.0</br>
-<br>v6.0.0</br>
-<br>v7.0.0</br>
-<br>v8.0.0</br>
-<br>v9.0.0</br>
+<br>v4.0.0 https://github.com/Asom98/project/releases/tag/v4.0.0</br>
+<br>v5.0.0 https://github.com/Asom98/project/releases/tag/v5.0.0</br>
+<br>v6.0.0 https://github.com/Asom98/project/releases/tag/v6.0.0</br>
+<br>v7.0.0 https://github.com/Asom98/project/releases/tag/v7.0.0</br>
+<br>v8.0.0 https://github.com/Asom98/project/releases/tag/v8.0.0</br>
+<br>v9.0.0 https://github.com/Asom98/project/releases/tag/v9.0.0</br>
 <br>v10.0.0</br>
+
 
 # Intelligence
 <p>The intelligence class contains two difficulty levels, one normal and one hard.</p>
 <p>The normal is normal mode and on hard mode the computer gets hidden advantages.</p>
 
-# Test & Coverage report
-<p>complete testsuite and how to get the coverage report.</p>
+# Installing the enviroment and making the tests
+<p>make venv</p>
+<p>make install</p>
+<p>make unitest. (make file, make flake8)</p> 
+<p></p>
+
+# Coverage
+<p>make coverage</p>
+<p>in files view html doc to see coverage result</p>
 
 # python docstrings
-<p></p>
+<p>make doc</p>
+<p>view documentation from the game folder</p>
 
 # UML
-<p></p>
+<p>install pylint, install graphviz, install pydoc</p>
+<p>in the termial:</p>
+<p>pyreverse -o png <path to gamefiles> </p>
