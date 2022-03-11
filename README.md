@@ -39,7 +39,7 @@ sum of total turns.</p>
 
 # python docstrings
 <p>make doc</p>
-<p>view documentation from the game folder</p>
+<p>view documentation from the game folder in doc/pdoc/pig to see all the documentation files as html</p>
 
 # UML
 <p>install pylint, install graphviz, install pydoc</p>
