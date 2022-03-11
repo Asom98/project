@@ -33,8 +33,9 @@ sum of total turns.</p>
 <p></p>
 
 # Coverage
+<p>in the termial:</p>
 <p>make coverage</p>
-<p>in files view html doc to see coverage result</p>
+<p>in htmlcov you will find all the coverage result</p>
 
 # python docstrings
 <p>make doc</p>
