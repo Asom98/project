@@ -27,10 +27,15 @@ sum of total turns.</p>
 <p>The normal is normal mode and on hard mode the computer gets hidden advantages.</p>
 
 # Installing the enviroment and making the tests
+<p>in the termial:</p>
 <p>make venv</p>
 <p>make install</p>
-<p>make unitest. (make file, make flake8)</p> 
-<p></p>
+<p>make unittest</p>
+<p>to see all the test results.</p>
+<p>in the termial:</p>
+<p>make test</p>
+<p>when using make test the following test will be executed : flake8, pylint, coverage</p>
+
 
 # Coverage
 <p>in the termial:</p>
