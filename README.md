@@ -31,7 +31,7 @@ sum of total turns.</p>
 <p>make venv</p>
 <p>make install</p>
 <p>make unittest</p>
-<p>to see all the test results.</p>
+<p>to see all the unit test results.</p>
 <p>in the termial:</p>
 <p>make test</p>
 <p>when using make test the following test will be executed : flake8, pylint, coverage</p>
