@@ -43,4 +43,5 @@ sum of total turns.</p>
 # UML
 <p>install pylint, install graphviz, install pydoc</p>
 <p>in the termial:</p>
-<p>pyreverse -o png <path to gamefiles> </p>
+<p>make pyreverse <path to gamefiles> </p>
+<p>and you will get the uml as a png file in doc/pyreverse</p>
